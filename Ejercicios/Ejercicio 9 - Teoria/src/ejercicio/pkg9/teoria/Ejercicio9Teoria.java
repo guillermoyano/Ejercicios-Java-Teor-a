@@ -11,11 +11,19 @@ package ejercicio.pkg9.teoria;
  */
 public class Ejercicio9Teoria {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+    
+        for (int i = 0; i < 10; i++) { //Para i=1 Hasta alumnos Con Paso 1 Hacer
+            System.out.println("Imprimo el valor de i: " + i);
+        }
+        
+        System.out.println("======================");
+        
+        System.out.println("for decreciendo");
+         for (int j = 10; j > 0; j--){
+            System.out.println("Imprimo el valor de i: " + j);
+        }
+         
     }
     
 }
