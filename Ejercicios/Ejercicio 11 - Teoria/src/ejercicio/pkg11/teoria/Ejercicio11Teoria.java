@@ -21,42 +21,48 @@ public class Ejercicio11Teoria {
 
     
     public static void main(String[] args) {
-        String frase, frasedos = " ", codificador = " ";
-        Scanner leer = new Scanner(System.in);
+        String frase, codificador = " ", aux;
+        Scanner leer = new Scanner (System.in);
         frase = leer.nextLine();
+        int j= frase.length();
         
-        
-        for (int i = 0; i < frase.length() ; i++){
-            switch (frase.substring(i)){
-                case "A" :
-                case "a" :    
-                    codificador = concat(codificador, "@");
+        for (int i=0; i< j ;i++){
+        switch (frase.substring(i, i+1)){
+            case "A":
+            case "a":
+             
+               codificador=codificador.concat("@");
+              
                     break;
-                case "E" :
-                case "e" :
-                    codificador = concat(frase, "#");
+            case "E":
+            case "e":
+                 codificador=codificador.concat("#");
+               
                     break;
-                case "I" :
-                case "i" :
-                    codificador = concat(codificador, "$");
+            case "I":
+            case "i":
+                 codificador=codificador.concat("$");
+               
                     break;
-                case "O" :
-                case "o" :
-                    codificador = concat(codificador, "%");
+            case "O":
+            case "o":
+                 codificador=codificador.concat("$");
+               
                     break;
-                case "U" :
-                case "u" :
-                    codificador = concat(codificador, "*");
-                    break;
-                default:
-                    codificador = concat(codificador, frase.substring(i));
-            }
-                    
+            case "U":
+            case "u":
+                 codificador=codificador.concat("$");
+               
+                    break;        
+            default :
+                codificador = codificador.concat(frase.substring(i,i+1)); 
+                
+               
         }
-    }
-
-    private static String concat(String codificador, String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+        
+        }
+        
+     System.out.print(codificador); 
+        System.out.println(" ");
+}
 }
