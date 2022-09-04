@@ -21,13 +21,19 @@ public class Ejercicio11Teoria {
 
     
     public static void main(String[] args) {
-        String frase, codificador = " ", aux;
+        String frase, aux;
         Scanner leer = new Scanner (System.in);
         frase = leer.nextLine();
-        int j= frase.length();
+        resultado(frase);
+        System.out.println(resultado(frase));
+    }
+        public static String resultado(String frase){
+        String codificador = " ", res;
         
-        for (int i=0; i< j ;i++){
-        switch (frase.substring(i, i+1)){
+        int j= frase.length();
+          for (int i=0; i< j ;i++){
+              
+          switch (frase.substring(i, i+1)){
             case "A":
             case "a":
              
@@ -55,14 +61,9 @@ public class Ejercicio11Teoria {
                
                     break;        
             default :
-                codificador = codificador.concat(frase.substring(i,i+1)); 
-                
-               
+                codificador = codificador.concat(frase.substring(i,i+1));        
+              }
         }
-        
-        }
-        
-     System.out.print(codificador); 
-        System.out.println(" ");
-}
+               return codificador;
+        } 
 }
