@@ -13,16 +13,26 @@ import java.util.Scanner;
 public class Ejercicio07 {
 
     public static void main(String[] args) {
-        String clave, correcta = "eureka";
+        String clave;
         Scanner leer = new Scanner(System.in);
         System.out.println("Ingrese la clave correcta");
         clave = leer.nextLine();
-        
+        ingreso(clave);
+    }
+    
+        public static boolean ingreso(String clave){
+        String correcta = "eureka";
+        boolean retorno;
         if (clave.equals(correcta)){
+            retorno = true;
             System.out.println("Corrrrrecccctoooo!!!");
+            
         }else{
             System.out.println("La clave es incorrecta");
+            retorno = false;
+            
         }
+        return retorno;
     }
     
 }
