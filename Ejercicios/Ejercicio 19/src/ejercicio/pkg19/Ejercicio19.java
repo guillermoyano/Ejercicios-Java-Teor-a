@@ -14,12 +14,13 @@ public class Ejercicio19 {
         int[][] matriz = {{0, -2, 4}, {2, 0, 2}, {-4, -2, 0}};
         int[][] matrizT = new int[3][3];
         Scanner leer = new Scanner(System.in);
-        llenarMatriz(matriz, leer);
+//        llenarMatriz(matriz, leer);
         mostrarMatriz(matriz);
         hacerMatrizT(matriz, matrizT);
         mostrarMatrizT(matriz);
         comparaMatriz(matrizT, matriz);
     }
+    /*
     public static void llenarMatriz(int matriz[][], Scanner leer) {
         System.out.println("Ingrese los 9 numeros de la Matriz");
         for (int i = 0; i < matriz.length; i++) {
@@ -29,6 +30,7 @@ public class Ejercicio19 {
             }
         }
     }
+*/
     public static void mostrarMatriz(int matriz[][]) {
         System.out.println("==== Matriz Principal =====");
         for (int i = 0; i < matriz.length; i++) {
@@ -42,7 +44,7 @@ public class Ejercicio19 {
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
-                matrizT[j][i] = matriz[i][j];
+                matrizT[i][j] = matriz[j][i];
             }
         }
     }
@@ -61,8 +63,10 @@ public class Ejercicio19 {
             for (int j = 0; j < 3; j++) {
                 if (matriz[i][j] + matrizT[i][j] == 0) {
                     bandera = true;
+                    break;
                 } else {
                     bandera = false;
+                    break;
                 }
             }
         }
@@ -71,6 +75,7 @@ public class Ejercicio19 {
             System.out.println("La Matriz es Antisimetrica");
         } else {
             System.out.println("La Matriz no es Antisimetrica");
+            
         }
         System.out.println("");
     }
