@@ -27,33 +27,29 @@ public class Ejercicio20 {
 
     public static void compararMatriz(int matriz[][]) {
         boolean magica = false;
-        int sumaDiag1 = 0, sumaDiag2 = 0;
+        int sumaDiag1 = 0, sumaDiag2 = 0, sumaFila = 0, sumaColumna = 0;
         int[] sumaCo = new int[3];
         int[] sumaFi = new int[3];
 
         for (int i = 0; i < 3; i++) {
-            int sumaFila = 0;
+            sumaFila = 0;
             for (int j = 0; j < 3; j++) {
                 sumaFila = sumaFila + matriz[i][j];
-
             }
             System.out.println("La suma de la fila " + (i + 1) + " es " + sumaFila);
-
             System.out.println("");
-
             sumaFi[i] = sumaFila;
         }
         for (int j = 0; j < 3; j++) {
-            int sumaColumna = 0;
-            for (int i = 0; i < 3; i++) {
-                sumaColumna = sumaColumna + matriz[i][j];
-
+            sumaColumna = 0;
+            {
+                for (int i = 0; i < 3; i++) {
+                    sumaColumna = sumaColumna + matriz[i][j];
+                }
+                System.out.println("La suma de la columna " + (j + 1) + " es " + sumaColumna);
             }
-            System.out.println("La suma de la columna " + (j + 1) + " es " + sumaColumna);
             System.out.println("");
-
             sumaCo[j] = sumaColumna;
-
         }
 
         for (int i = 0; i < 3; i++) {
@@ -76,11 +72,19 @@ public class Ejercicio20 {
         System.out.println("La suma de la diagonal invertida es: " + sumaDiag2);
         System.out.println("");
 
-        for (int i=0; i < 3; i++)
-        if((sumaCo[i]==sumaFi[i]) && (sumaDiag1==sumaDiag2) && (sumaCo[i]==sumaDiag1)){
-            magica=true;
-        }else{
-            
+        for (int i = 0; i < 3; i++) {
+            if ((sumaCo[i] == sumaFi[i]) && (sumaDiag1 == sumaDiag2) && (sumaCo[i] == sumaDiag1)) {
+                magica = true;
+            } else {
+                magica = false;
+                break;
+            }
+        }
+        if (magica == true) {
+            System.out.println("La matriz es mágica");
+        } else {
+            System.out.println("La matriz no es mágica");
+
         }
     }
 }

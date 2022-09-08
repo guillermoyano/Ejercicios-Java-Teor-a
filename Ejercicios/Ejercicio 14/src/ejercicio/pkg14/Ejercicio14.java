@@ -24,7 +24,7 @@ public class Ejercicio14 {
     }
 
     public static void convertir(double euros, Scanner leer) {
-        String salir = "";
+        
         do {
             System.out.println("1 - Convertir a libras");
             System.out.println("2 - Convertir a dólar");
