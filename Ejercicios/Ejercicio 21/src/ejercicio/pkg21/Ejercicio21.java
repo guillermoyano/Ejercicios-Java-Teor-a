@@ -62,16 +62,11 @@ public class Ejercicio21 {
                                     System.out.println("");
                                 }
                                 hizoMach = true;
+                                break;
                             }
                         }
                     }
                 }
-                if (hizoMach == true) {
-                    break;
-                }
-            }
-            if (hizoMach == true) {
-                break;
             }
         }
         if (hizoMach == false) {

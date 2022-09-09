@@ -9,19 +9,17 @@ import java.util.Scanner;
 public class ExtrasEjercicio01 {
 
     public static void main(String[] args) {
-        int minutos;
-        double dias,horas;
         Scanner leer = new Scanner (System.in);
-        System.out.println("Ingrese la cantidad de minutos a convertir");
-        minutos = leer.nextInt();
+        System.out.println("]Ingrese la cantidad de minutos");
+        int minutos = leer.nextInt();
         
-        horas = minutos/60;
+        double horas = minutos/60;
+        double dias = horas/24;
+        double horas2 = horas - Math.floor(dias)*24;
         
-        dias= Math.round(horas/24);
-        if (dias >= 1){
-            horas = Math.floor(horas - (24*dias));
-        }
-        System.out.println(minutos + " minutos convertidos son: "+dias+" dias, y " +horas+ "horas");
+        System.out.println(Math.floor(dias)+" dias "+ horas2 + " horas.");
     }
-    
+
 }
+
+         

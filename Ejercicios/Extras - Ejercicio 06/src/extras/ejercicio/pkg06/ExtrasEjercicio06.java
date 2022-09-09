@@ -18,7 +18,7 @@ public class ExtrasEjercicio06 {
         
         for (int i = 0; i < personajes; i++) {
             altura = leer.nextFloat();
-            if (altura < 1.6){
+            if (altura < 1.61){
                 contador++;
                 suma1 = suma1 + altura;   
             }

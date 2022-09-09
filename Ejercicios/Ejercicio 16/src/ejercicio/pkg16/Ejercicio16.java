@@ -37,7 +37,6 @@ public class Ejercicio16 {
                 contador++;
                 System.out.println("El número se encuentra en la posición: " + (i + 1));
             }
-
         }
         if (contador != 0) {
             if (contador==1){
@@ -45,7 +44,6 @@ public class Ejercicio16 {
             }else{
                 System.out.println("El número se encontró " + contador + " veces");
             }
-            
         } else {
             System.out.println("El número no se encontró en el vector");
         }
