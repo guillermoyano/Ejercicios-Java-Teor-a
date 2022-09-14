@@ -14,23 +14,13 @@ public class Ejercicio19 {
         int[][] matriz = {{0, -2, 4}, {2, 0, 2}, {-4, -2, 0}};
         int[][] matrizT = new int[3][3];
         Scanner leer = new Scanner(System.in);
-//        llenarMatriz(matriz, leer);
+
         mostrarMatriz(matriz);
         hacerMatrizT(matriz, matrizT);
         mostrarMatrizT(matriz);
         comparaMatriz(matrizT, matriz);
     }
-    /*
-    public static void llenarMatriz(int matriz[][], Scanner leer) {
-        System.out.println("Ingrese los 9 numeros de la Matriz");
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz.length; j++) {
-                System.out.print("Matriz [" + (i + 1) + "][" + (j + 1) + "] = ");
-                matriz[i][j] = leer.nextInt();
-            }
-        }
-    }
-*/
+    
     public static void mostrarMatriz(int matriz[][]) {
         System.out.println("==== Matriz Principal =====");
         for (int i = 0; i < matriz.length; i++) {
