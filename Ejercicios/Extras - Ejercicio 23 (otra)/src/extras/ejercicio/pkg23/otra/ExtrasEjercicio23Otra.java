@@ -27,7 +27,7 @@ public class ExtrasEjercicio23Otra {
         int y = 0;
         do {
             y = (int) (Math.random() * 20);
-            x = (int) (Math.random() * 15);
+            x = (int) (Math.random() * (20-p.length()));
         } while (m[y][x] != null && m[y][x + p.length() - 1] != null);
         for (int i = 0; i < p.length(); i++) {
             m[y][x + i] = p.substring(0 + i, 1 + i);
