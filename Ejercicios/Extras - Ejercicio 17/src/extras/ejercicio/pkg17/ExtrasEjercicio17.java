@@ -27,11 +27,7 @@ public class ExtrasEjercicio17 {
                 contador++;
             }
         }
-        if (contador == 2) {
-            primo = true;
-        } else {
-            primo = false;
-        }
-        return primo;
+        
+        return contador==2;
     }
 }
